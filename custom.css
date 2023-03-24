@@ -1,0 +1,70 @@
+header .nav-pills {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  
+  header img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .nav-pills .nav-link.active,
+  .nav-pills .nav-link:hover {
+    background-color: #5401B2; /* Change this to your desired color */
+    color: #fff; /* Change this to your desired text color */
+  }
+  
+  .nav-pills .nav-link {
+    background-color: #fff; /* Change this to your desired background color */
+    color: #4b049c; /* Change this to your desired text color */
+  }
+  
+  .star {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    max-width: 50%;
+  }
+  
+  .btn-primary {
+    background-color: #5401B2;
+    color: white;
+    border: none;
+  }
+  
+  .lead {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    max-width: 1000px;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+  }
+  
+
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+  }
+  
+  .img-container img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  
+  
+
+
+
+
+.display-5 {
+    text-align: center;
+  }
+  
