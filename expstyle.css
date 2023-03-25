@@ -3,38 +3,44 @@ header .nav-pills {
     margin-bottom: auto;
   }
   
-  header img {
+  
+header img {
     max-width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
   }
   
-  .nav-pills .nav-link.active,
-  .nav-pills .nav-link:hover {
+.nav-pills .nav-link.active,
+.nav-pills .nav-link:hover {
     background-color: #5401B2;
     color: #fff;
   }
   
-  .nav-pills .nav-link {
+.nav-pills .nav-link {
     background-color: #fff;
     color: #4b049c;
   }
   
 
   
-  .form-control {
+.form-control {
     height: 45px; }
 
-
-
+.btn {
+    background-color: #5401B2;
+    color: white;
+    border: none;
+    flex: 0 0 auto;
+    margin-top: 3rem;
+    }
 
 .display-5 {
   padding-top: 1rem;
     text-align: center;
   }
 
-  .row {
+.row {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -42,7 +48,7 @@ header .nav-pills {
     margin-bottom: 15px;
   }
   
-  .centerbox {
+.centerbox {
     padding-top: 3rem;
     text-align: center;
   }
@@ -54,18 +60,18 @@ header .nav-pills {
     object-fit: contain;
   }
   
-  .col-icon {
+.col-icon {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 10px;
   }
   
-  .col-text {
+.col-text {
     align-self: flex-end;
   }
   
-  p {
+p {
     text-align: left;
     margin: 0;
   }

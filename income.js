@@ -1,6 +1,27 @@
-const incomeInput = document.getElementById('income-input');
+const incomeInputs = document.querySelectorAll('#money-input');
 
-incomeInput.addEventListener('input', (event) => {
-  const inputValue = event.target.value.replace(/[^0-9]/g, '');
-  event.target.value = inputValue;
+incomeInputs.forEach((input) => {
+  input.addEventListener('input', (event) => {
+    const inputValue = event.target.value.replace(/[^0-9]/g, '');
+    event.target.value = inputValue;
+  });
+});
+
+// const incomeInput = document.getElementById('income-input');
+// const nextBtn = document.getElementById('next-btn');
+
+// incomeInput.addEventListener('input', (event) => {
+//   const inputValue = event.target.value;
+//   nextBtn.disabled = inputValue === '';
+// });
+
+
+const incomeInput = document.getElementById('income-input');
+const nextButton = document.getElementById('next-button');
+
+nextButton.addEventListener('click', (event) => {
+  if (incomeInput.value === "") {
+    console.log("Button clicked");
+    event.preventDefault();
+  }
 });
