@@ -12,13 +12,13 @@ header .nav-pills {
   
   .nav-pills .nav-link.active,
   .nav-pills .nav-link:hover {
-    background-color: #5401B2; /* Change this to your desired color */
-    color: #fff; /* Change this to your desired text color */
+    background-color: #5401B2;
+    color: #fff;
   }
   
   .nav-pills .nav-link {
-    background-color: #fff; /* Change this to your desired background color */
-    color: #4b049c; /* Change this to your desired text color */
+    background-color: #fff;
+    color: #4b049c;
   }
   
   .star {
@@ -30,10 +30,11 @@ header .nav-pills {
     max-width: 50%;
   }
   
-  .btn-primary {
+  .btn {
     background-color: #5401B2;
     color: white;
     border: none;
+    flex: 0 0 auto;
   }
   
   .lead {
@@ -58,13 +59,19 @@ header .nav-pills {
     height: auto;
   }
   
+  .input-group {
+    flex: 1;
+    margin-right: 1rem;
+  }
   
-  
+  .form-control {
+    height: 45px; }
 
 
 
 
 .display-5 {
+  padding-top: 1rem;
     text-align: center;
   }
   
