@@ -7,14 +7,6 @@ incomeInputs.forEach((input) => {
   });
 });
 
-// const incomeInput = document.getElementById('income-input');
-// const nextBtn = document.getElementById('next-btn');
-
-// incomeInput.addEventListener('input', (event) => {
-//   const inputValue = event.target.value;
-//   nextBtn.disabled = inputValue === '';
-// });
-
 
 const incomeInput = document.getElementById('income-input');
 const nextButton = document.getElementById('next-button');
