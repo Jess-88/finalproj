@@ -1,0 +1,65 @@
+header .nav-pills {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  
+  
+header img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+.nav-pills .nav-link.active,
+.nav-pills .nav-link:hover {
+    background-color: #5401B2;
+    color: #fff;
+  }
+  
+.nav-pills .nav-link {
+    background-color: #fff;
+    color: #4b049c;
+  }
+  
+  .input-group {
+    flex: 1;
+    margin-right: 1rem;
+  }
+
+  
+.form-control {
+    height: 45px; }
+
+.btn {
+    background-color: #5401B2;
+    color: white;
+    border: none;
+    flex: 0 0 auto;
+    }
+
+.display-5 {
+  padding-top: 1rem;
+    text-align: center;
+    padding-bottom:3rem;
+  }
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+.centerbox {
+    padding-top: 3rem;
+    text-align: center;
+  }
+
+  p.lead {
+    max-width: 400%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+  

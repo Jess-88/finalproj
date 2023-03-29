@@ -8,8 +8,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="expstyle.css">
+    <script src="income.js"></script>
 </head>
-<body>
+<body onload="populateIncome()"></body>>
 
     <div class="container
     <div class="px-4 py-5 my-5 text-center">
@@ -43,7 +44,7 @@
                     <p>Housing</p>
                     </div>
                     <div class="col-md-4">
-                    <input type="text" class="form-control"id="money-input" placeholder="Enter amount or leave blank">
+                    <input type="number" class="form-control"id="expense1Input" placeholder="Enter amount">
                     </div>
                 </div>
 <!-- food -->
@@ -55,7 +56,7 @@
                     <p>Food</p>
                     </div>
                     <div class="col-md-4">
-                    <input type="text" class="form-control"id="money-input" placeholder="Enter amount or leave blank">
+                    <input type="number" class="form-control"id="expense2Input" placeholder="Enter amount">
                     </div>
                 </div>
 <!-- loans -->
@@ -67,7 +68,7 @@
                     <p>Debt/Loan repayments</p>
                     </div>
                     <div class="col-md-4">
-                    <input type="text" class="form-control"id="money-input" placeholder="Enter amount or leave blank">
+                    <input type="number" class="form-control"id="expense3Input" placeholder="Enter amount">
                     </div>
                 </div>
 
@@ -79,7 +80,7 @@
                     <p>Bills</p>
                     </div>
                     <div class="col-md-4">
-                    <input type="text" class="form-control"id="money-input" placeholder="Enter amount or leave blank">
+                    <input type="number" class="form-control"id="expense4Input" placeholder="Enter amount">
                     </div>
                 </div>
 <!-- Bills -->
@@ -91,7 +92,7 @@
                     <p>Transportation Expenses</p>
                     </div>
                     <div class="col-md-4">
-                    <input type="text" class="form-control"id="money-input" placeholder="Enter amount or leave blank">
+                    <input type="number" class="form-control"id="expense5Input" placeholder="Enter amount">
                     </div>
                 </div>
  <!-- savings -->
@@ -103,7 +104,7 @@
                     <p>Savings and Investments</p>
                     </div>
                     <div class="col-md-4">
-                    <input type="text" class="form-control"id="money-input" placeholder="Enter amount or leave blank">
+                    <input type="number" class="form-control"id="expense6Input" placeholder="Enter amount">
                     </div>
                 </div>
  <!-- subs -->
@@ -115,27 +116,35 @@
                         <p>Subsciptions</p>
                     </div>
                     <div class="col-md-4">
-                    <input type="text" class="form-control"id="money-input" placeholder="Enter amount or leave blank">
+                    <input type="number" class="form-control"id="expense7Input" placeholder="Enter amount">
                     </div>
                 </div>
  <!-- other -->
-                <div class="row align-items-center">
-                    <div class="col-md-1">
+              <div class="row align-items-center">
+                <div class="col-md-1">
                     <img src="assets/wallet.png" alt="walleticon" style="height: 30px;">
-                    </div>
-                    <div class="col-md-3">
-                        <p>Other expenses</p>
-                    </div>
-                    <div class="col-md-4">
-                    <input type="text" class="form-control" id="money-input" placeholder="Enter amount or leave blank">
-                    </div>
                 </div>
-                <div class="mt-5">
-                    <a href="goalmilestones.html" style="text-decoration:none;">
-                      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <div class="col-md-3">
+                    <p>Other expenses</p>
+                </div>
+                <div class="col-md-4">
+                    <input type="number" class="form-control" id="expense8Input" placeholder="Enter amount">
+                </div>
+              </div>
+              <div>
+                <button id="calculateButton" onclick="calculateBudget()">Calculate</button>
+                <div class="result-box">
+                    <p class="result-text">Remaining budget:</p>
+                    <span id="result"></span>
+                </div>
+              </div>
+
+              <div class="mt-5">
+                <a href="goalmilestones.html" style="text-decoration:none;">
+                    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                         <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Next</button>
-                      </div>
-                    </a>
+                    </div>
+                </a>
               </div>
             </div>
           </div>

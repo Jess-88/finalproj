@@ -1,5 +1,6 @@
 const addRowBtn = document.getElementById("add-row-btn");
 const expenseRows = document.getElementById("expense-rows");
+const milestonesForm = document.getElementById("milestones-form");
 
 function createExpenseRow() {
   const row = document.createElement("div");
@@ -54,4 +55,29 @@ function createExpenseRow() {
 addRowBtn.addEventListener("click", function() {
   const expenseRow = createExpenseRow();
   expenseRows.appendChild(expenseRow);
+});
+
+// Retrieve the remaining budget value
+var remainingBudget = localStorage.getItem("remainingBudget");
+
+// Save milestones data to localStorage when form is submitted
+milestonesForm.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const dateInputs = document.querySelectorAll(".date-input");
+  const occasionInputs = document.querySelectorAll(".occasion-input");
+  const amountInputs = document.querySelectorAll(".amount-input");
+
+  const milestones = [];
+
+  for (let i = 0; i < dateInputs.length; i++) {
+    milestones.push({
+      date: dateInputs[i].value,
+      occasion: occasionInputs[i].value,
+      amount: parseFloat(amountInputs[i].value),
+    });
+  }
+
+  localStorage.setItem("milestones", JSON.stringify(milestones));
+  window.location.href = "plan.html";
 });
