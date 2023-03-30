@@ -36,6 +36,11 @@ header .nav-pills {
     border: none;
     flex: 0 0 auto;
   }
+
+  .btn:hover {
+    background-color: #6d20d6;
+    cursor: pointer;
+}
   
   .lead {
     font-size: 1.1rem;
@@ -74,4 +79,5 @@ header .nav-pills {
   padding-top: 1rem;
     text-align: center;
   }
+
   

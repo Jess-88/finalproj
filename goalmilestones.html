@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milestones</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="expstyle.css">
+</head>
+<body>
+
+    <div class="container
+    <div class="px-4 py-5 my-5 text-center">
+       
+          <div class="container">
+            <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+              <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                <img src="assets/logo.png" alt="Logo" width="120" height="60" class="me-2">
+              </a>
+          
+              <ul class="nav nav-pills">
+                <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+              </ul>
+            </header>
+          </div>
+          <h1 class="display-5 fw-bold">Goal Milestones</h1>
+          
+          <form id="milestones-form" action="plan.html" method="POST">
+            <div id="expense-rows">
+              <div class="row mb-3">
+                <div class="col-md-4">
+                  <label for="date-input" class="form-label">Date</label>
+                  <input type="date" class="form-control date-input" id="date-input" name="date[]">
+                </div>
+                <div class="col-md-4">
+                  <label for="occasion-input" class="form-label">Occasion</label>
+                  <input type="text" class="form-control occasion-input" id="occasion-input" name="occasion[]">
+                </div>
+                <div class="col-md-4">
+                  <label for="amount-input" class="form-label">Amount</label>
+                  <input type="number" class="form-control amount-input" id="amount-input" name="amount[]">
+                </div>
+              </div>
+            </div>
+            
+            <button id="add-row-btn" type="button" class="btn btn-primary">Add Row</button>
+
+            <div class="mt-5">
+              <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <button type="submit" class="btn btn-primary btn-lg px-4 gap-3">Next</button>
+              </div>
+            </div>
+          </form>
+
+      </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="goalm.js"></script>
+  </body>
+</html>
