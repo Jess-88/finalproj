@@ -137,3 +137,39 @@ p {
     color: #5401B2;
   }
   
+  .delete-row-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .delete-row-btn {
+    width: 100px;
+    height: 45px;
+    margin-top: 1.9rem;
+  }
+  
+  .input-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #add-row-btn {
+    width: 100px;
+    height: 45px;
+    margin-top: 2rem;
+    margin-right: auto;
+    background-color: #5401B2;
+    color: #fff;
+    border: none;
+    flex: 0 0 auto;
+  }
+  
+  #add-row-btn:hover {
+    background-color: #6d20d6;
+    cursor: pointer;
+  }
+  
+  
+  

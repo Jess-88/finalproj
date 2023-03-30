@@ -57,35 +57,7 @@
 //   expenseRows.appendChild(expenseRow);
 // });
 
-// // Retrieve the remaining budget value
-// var remainingBudget = localStorage.getItem("remainingBudget");
-
-// <---- data now sending to postgresql---> below is local
-// // Save milestones data to localStorage when form is submitted
-// milestonesForm.addEventListener("submit", function(event) {
-//   event.preventDefault();
-
-//   const dateInputs = document.querySelectorAll(".date-input");
-//   const occasionInputs = document.querySelectorAll(".occasion-input");
-//   const amountInputs = document.querySelectorAll(".amount-input");
-
-//   const milestones = [];
-
-//   for (let i = 0; i < dateInputs.length; i++) {
-//     milestones.push({
-//       date: dateInputs[i].value,
-//       occasion: occasionInputs[i].value,
-//       amount: parseFloat(amountInputs[i].value),
-//     });
-//   }
-
-//   localStorage.setItem("milestones", JSON.stringify(milestones));
-//   window.location.href = "plan.html";
-// });
-// <---- data now sending to postgresql--->
-
-// <---- data now sending to postgresql---> below is sql 1
-// Save milestones data to the server when the form is submitted
+// // Save milestones data to the server when the form is submitted
 // milestonesForm.addEventListener("submit", async function (event) {
 //   event.preventDefault();
 
@@ -104,6 +76,7 @@
 //   }
 
 //   // Send the milestones data to the server
+//   // console.log(milestones)
 //   try {
 //     const response = await fetch("http://localhost:8080/milestones", {
 //       method: "POST",
@@ -114,7 +87,10 @@
 //     });
 
 //     if (response.ok) {
-//       window.location.href = "plan.html";
+//       const jsonResponse = await response.json();
+//       console.log(jsonResponse);
+//       alert("Milestones data has been successfully saved");
+//       window.location.href = 'plan.html';
 //     } else {
 //       throw new Error("Failed to save milestones data");
 //     }
@@ -123,20 +99,19 @@
 //     alert("An error occurred while saving milestones data. Please try again.");
 //   }
 // });
-// <---- data now sending to postgresql---> above is sql 1
 
+// delete code 
 
-// new sql code
 const addRowBtn = document.getElementById("add-row-btn");
 const expenseRows = document.getElementById("expense-rows");
 const milestonesForm = document.getElementById("milestones-form");
 
 function createExpenseRow() {
   const row = document.createElement("div");
-  row.classList.add("row", "mb-3");
+  row.classList.add("row", "mb-3", "input-row");
 
   const dateCol = document.createElement("div");
-  dateCol.classList.add("col-md-4");
+  dateCol.classList.add("col-md-3");
   const dateLabel = document.createElement("label");
   dateLabel.setAttribute("for", "date-input");
   dateLabel.classList.add("form-label");
@@ -149,7 +124,7 @@ function createExpenseRow() {
   dateCol.appendChild(dateInput);
 
   const occasionCol = document.createElement("div");
-  occasionCol.classList.add("col-md-4");
+  occasionCol.classList.add("col-md-3");
   const occasionLabel = document.createElement("label");
   occasionLabel.setAttribute("for", "occasion-input");
   occasionLabel.classList.add("form-label");
@@ -162,7 +137,7 @@ function createExpenseRow() {
   occasionCol.appendChild(occasionInput);
 
   const amountCol = document.createElement("div");
-  amountCol.classList.add("col-md-4");
+  amountCol.classList.add("col-md-3");
   const amountLabel = document.createElement("label");
   amountLabel.setAttribute("for", "amount-input");
   amountLabel.classList.add("form-label");
@@ -174,14 +149,30 @@ function createExpenseRow() {
   amountCol.appendChild(amountLabel);
   amountCol.appendChild(amountInput);
 
+  const deleteCol = document.createElement("div");
+  deleteCol.classList.add("col-md-3");
+  const deleteLabel = document.createElement("label");
+  deleteLabel.classList.add("form-label");
+  deleteLabel.textContent = "\u00A0";
+  const deleteBtn = document.createElement("button");
+  deleteBtn.setAttribute("type", "button");
+  deleteBtn.classList.add("form-control", "btn", "btn-danger", "delete-row-btn");
+  deleteBtn.textContent = "Delete";
+  deleteBtn.onclick = () => {
+    row.remove();
+  };
+  deleteCol.appendChild(deleteLabel);
+  deleteCol.appendChild(deleteBtn);
+
   row.appendChild(dateCol);
   row.appendChild(occasionCol);
   row.appendChild(amountCol);
+  row.appendChild(deleteCol);
 
   return row;
 }
 
-addRowBtn.addEventListener("click", function() {
+addRowBtn.addEventListener("click", function () {
   const expenseRow = createExpenseRow();
   expenseRows.appendChild(expenseRow);
 });
@@ -204,8 +195,7 @@ milestonesForm.addEventListener("submit", async function (event) {
     });
   }
 
-  // Send the milestones data to the server
-  // console.log(milestones)
+      // Send the milestones data to the server
   try {
     const response = await fetch("http://localhost:8080/milestones", {
       method: "POST",
@@ -228,3 +218,4 @@ milestonesForm.addEventListener("submit", async function (event) {
     alert("An error occurred while saving milestones data. Please try again.");
   }
 });
+
