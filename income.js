@@ -43,6 +43,6 @@ function calculateBudget() {
   document.getElementById('result').innerHTML = remainingBudget;
 }
 
-// After calculating the remaining budget
-var remainingBudget = // your calculated value
+// after calculating the remaining budget
+var remainingBudget = // calculated value
 localStorage.setItem("remainingBudget", remainingBudget);

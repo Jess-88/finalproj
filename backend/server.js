@@ -5,11 +5,11 @@ const db = require('./db');
 
 const app = express();
 
-// Middleware
+// middleware
 app.use(cors());
 app.use(bodyParser.json());
 
-// Function to reset the milestones table
+// function to reset the milestones table
 async function resetMilestonesTable() {
   try {
     await db.query('TRUNCATE TABLE milestones');
@@ -19,10 +19,10 @@ async function resetMilestonesTable() {
   }
 }
 
-// Call the resetMilestonesTable function
+// call the resetMilestonesTable function for current single database use
 resetMilestonesTable();
 
-// Routes
+// routes
 app.get('/', (req, res) => {
     res.send('Backend for Coin is running on 8080');
   });
@@ -54,7 +54,7 @@ app.get('/', (req, res) => {
     }
   });
   
-  // Start the server
+  // start the server
   const port = process.env.PORT || 8080;
   app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
